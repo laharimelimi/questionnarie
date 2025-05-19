@@ -1,0 +1,91 @@
+html, body {
+   height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fff0f5;
+  overflow: hidden; /* disables scrollbars */
+
+}
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* 💥 No scrollbars at all */
+  background-color: #ffe4f2; /* Optional: soft background */
+}
+
+/* Make the container fill and center content */
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-shadow: 0 0 10px #ffc0cb;
+    overflow: hidden; /* disables scrollbars */
+
+  }
+
+
+
+  /* Question text */
+h2, label {
+  color: #ff69b4;
+  text-align: center;
+}
+
+ /* Button styling */
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #ff8da0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1; /* Ensures it's clickable */
+}
+
+/* Question block */
+.que {
+  margin-bottom: 2rem;
+}
+
+/* Yes button 
+.yes {
+  background-color: #ffb6c1;
+  color: white;
+}
+
+/* No button 
+.no {
+
+  color: white;
+  position: relative;
+}*/
+
+/* Prevent text selection while chasing button */
+button:active {
+  user-select: none;
+}
+ 
+/* Responsive tweak */
+@media (min-width: 768px) {
+  .container {
+    width: 400px; /* fixed size for tablets and up */
+  }
+}
+/* Responsive tweaks for smaller screens */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 1rem;
+  }
+}

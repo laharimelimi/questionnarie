@@ -1,0 +1,109 @@
+<title>FORYOU</title>
+<div class="container">
+    <h2>Test to be my half</h2>
+    <!--question1-->
+    <div class="que" *ngIf="currentQuestion === 1">
+    <label>1.Do you love spending time with me?</label><br>
+    <!--Yes Button-->
+    <button 
+       type="button"
+       class="yes"
+       (click)="noanswer('q1', 'yes')">
+       Yes
+    </button>
+    <!--No Button-->
+    <button
+       type="button" 
+       class="no"
+       [ngStyle]="noStyle[1]"
+       (mouseenter)="moveNoButton($event, '1')"
+       (click)="$event.preventDefault()">
+       No
+    </button>
+    </div>
+    <!--questuon2-->
+    <div class="que" *ngIf="currentQuestion === 2">
+    <label>2. Would you go on a date with me this ?</label><br>
+     <!--Yes Button-->
+    <button 
+     type="button"
+     class="yes"
+     (click)="noanswer('q2', 'yes')"> 
+     Yes
+    </button>
+    <!--No Button-->
+    <button 
+     type="button"
+     class="no"
+     [ngStyle]="noStyle['2']"
+     (mouseenter)="moveNoButton($event, '2')">
+     No
+    </button>
+    </div>
+    <!--question3-->
+    <div class="que" *ngIf="currentQuestion === 3">
+      <label>3. Do you think I'm cute?</label><br>
+      <!--Yes Button-->
+      <button 
+       type="button"
+       class="yes"
+       (click)="noanswer('q3', 'yes')"> 
+       Yes
+      </button>
+      <!--No Button-->
+      <button
+       type="button"
+       class="no"
+       [ngStyle]="noStyle['3']"
+       (mouseenter)="moveNoButton($event, '3')"
+       (click)="$event.preventDefault()">
+       No
+      </button>
+      </div>
+      <!--questuon4-->
+    <div class="que" *ngIf="currentQuestion === 4">
+      <label>4. Have you ever lied to me?</label><br>
+      <!--Yes Button-->
+      <button 
+       type="button"
+       class="yes"[ngStyle]="noStyle['4']"
+       (mouseenter)="moveNoButton($event, '4')"
+       (click)="$event.preventDefault()"> 
+       Yes
+      </button>
+      <!--No Button-->
+      <button
+       type="button"
+       class="no"
+       (click)="noanswer('q4', 'no')">
+       No
+      </button>
+      </div>
+      <!--question5-->
+      <div class="que" *ngIf="currentQuestion === 5">
+         <label>5. Are we married?</label><br>
+         <!--Yes Button-->
+         <button
+         type="button"
+         class="yes"
+         (click)="noanswer('q5', 'yes')">
+         Yes
+         </button>
+         <!--No Button-->
+         <button
+         type="button"
+         class="no"
+         [ngStyle]="noStyle['5']"
+         (mouseenter)="moveNoButton($event, '5')"
+         (click)="$event.preventDefault()">
+         No
+         </button>
+      </div>
+      <!-- Optional Summary -->
+    <div class="summary" *ngIf="currentQuestion === 6">
+      <p *ngIf="finalAnswer === 'yes'">"Hmm… you survived all the questions 😏<br>
+But just to be sure… I might need to test you in person 🥰<br>
+Now come here and claim your reward – ME! 💋"</p>
+    
+    </div>
+  </div>
